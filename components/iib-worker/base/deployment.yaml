@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: iib-worker
     spec:
       containers:
-      - image: python-image:latest
+      - image: quay.io/redhat-user-workloads/ynanavat-tenant/iib/iib-worker@sha256:e30893b7d510a19ada165297a02dc41ceaff7c7a1a1929e7d70200170c6d2c3b
         name: my-python
         ports:
         - containerPort: 8081
