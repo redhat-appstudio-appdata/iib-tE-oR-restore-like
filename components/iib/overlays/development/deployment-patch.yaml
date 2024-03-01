@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: iib
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/ynanavat-tenant/iib/iib@sha256:a50b33e3874983caf397eac3d9d71c4a44529ea1ca8ad3edc80f6bda2f1bbdee
+        name: my-python
+        resources: {}
+status: {}
