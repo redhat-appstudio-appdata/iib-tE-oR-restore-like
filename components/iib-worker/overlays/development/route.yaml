@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: iib-worker
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: iib-worker
+    app.kubernetes.io/part-of: iib
+  name: iib-worker7pal
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: iib-worker
+    weight: null
+status: {}
